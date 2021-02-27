@@ -11,7 +11,7 @@ const forecast = (lattitude, longitude, callback) => {
             callback((body.error.info), undefined);
 
         } else {
-            callback(undefined, `current weather:  ${body.current.weather_descriptions}.It is currently ${body.current.temperature} degrees out.It feels like ${body.current.feelslike} degrees out`);
+            callback(undefined, `local time : ${body.location.localtime} \ncurrent weather:  ${body.current.weather_descriptions} \nCurrent Temperature: ${body.current.temperature}\u00B0C \nfeels like: ${body.current.feelslike}\u00B0C`);
         }
     })
 
